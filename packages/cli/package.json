@@ -1,0 +1,27 @@
+{
+  "name": "@evomind-ai/cli",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "bin": {
+    "evomind": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint src --ext .ts",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "@evomind-ai/core": "^0.1.0",
+    "commander": "^11.1.0",
+    "inquirer": "^9.3.7"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^20.17.17",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}
