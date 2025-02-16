@@ -1,14 +1,14 @@
-# 创建插件
+# Creating Plugins
 
-本指南将帮助您创建自己的EvoMind插件。
+This guide will help you create your own EvoMind plugin.
 
-## 使用CLI创建插件
+## Using CLI to Create a Plugin
 
 ```bash
 evomind plugin create my-plugin
 ```
 
-## 插件结构
+## Plugin Structure
 
 ```
 my-plugin/
@@ -20,7 +20,7 @@ my-plugin/
 └── tsconfig.json
 ```
 
-## 实现插件接口
+## Implementing Plugin Interface
 
 ```typescript
 import { Plugin } from '@evomind-ai/core';
@@ -30,16 +30,16 @@ export class MyPlugin implements Plugin {
   version = '1.0.0';
 
   async activate(): Promise<void> {
-    // 插件初始化逻辑
+    // Plugin initialization logic
   }
 
   async deactivate(): Promise<void> {
-    // 插件清理逻辑
+    // Plugin cleanup logic
   }
 }
 ```
 
-## 插件配置
+## Plugin Configuration
 
 manifest.json:
 ```json
@@ -52,22 +52,22 @@ manifest.json:
 }
 ```
 
-## 发布插件
+## Publishing Plugin
 
-1. 构建插件
+1. Build the plugin
 ```bash
 npm run build
 ```
 
-2. 发布到npm
+2. Publish to npm
 ```bash
 npm publish
 ```
 
-## 最佳实践
+## Best Practices
 
-- 使用TypeScript编写插件
-- 提供完整的类型定义
-- 实现适当的错误处理
-- 添加单元测试
-- 编写详细文档
+- Write plugins using TypeScript
+- Provide complete type definitions
+- Implement proper error handling
+- Add unit tests
+- Write detailed documentation

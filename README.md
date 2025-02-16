@@ -8,65 +8,65 @@
 
 </div>
 
-EvoMind是一个模块化的AI框架，提供灵活、可扩展的人工智能应用开发平台。通过强大的插件系统和多LLM提供商支持，开发者可以快速构建和部署AI应用。
+EvoMind is a modular AI framework providing a flexible and extensible platform for AI application development. Through its powerful plugin system and multi-LLM provider support, developers can quickly build and deploy AI applications.
 
-## ✨ 特性
+## ✨ Features
 
-- 🤖 **多LLM支持** - 集成OpenAI、Claude、DeepSeek等多个LLM提供商，支持本地部署
-- 🔌 **插件系统** - 灵活的插件架构，支持热插拔和动态加载
-- 🎯 **任务编排** - 可视化任务流程设计器，支持复杂工作流
-- 💾 **数据存储** - 支持多种存储方式，包括内存存储和缓存
-- 🔒 **安全机制** - 内置认证和速率限制功能
+- 🤖 **Multi-LLM Support** - Integration with multiple LLM providers including OpenAI, Claude, and DeepSeek, with local deployment support
+- 🔌 **Plugin System** - Flexible plugin architecture with hot-reloading and dynamic loading
+- 🎯 **Task Orchestration** - Visual workflow designer supporting complex task pipelines
+- 💾 **Data Storage** - Support for multiple storage methods, including memory storage and caching
+- 🔒 **Security Mechanisms** - Built-in authentication and rate limiting
 
-## 🚀 快速开始
+## 🚀 Quick Start
 
-### 安装
+### Installation
 
 ```bash
-# 安装CLI工具
+# Install CLI tool
 npm install -g @evomind-ai/cli
 
-# 创建新项目
+# Create new project
 evomind init my-project
 cd my-project
 
-# 安装依赖
+# Install dependencies
 npm install
 ```
 
-### 配置
+### Configuration
 
-创建 `.env` 文件并配置必要的环境变量：
+Create `.env` file and configure necessary environment variables:
 
 ```env
 OPENAI_API_KEY=your_api_key
 ```
 
-### 运行
+### Running
 
 ```bash
-# 启动开发服务器
+# Start development server
 npm run dev
 ```
 
-## 📦 项目结构
+## 📦 Project Structure
 
 ```
 evomind-ai/
 ├── packages/
-│   ├── core/          # 核心框架
-│   ├── llm/           # LLM集成层
-│   ├── plugins/       # 插件系统
-│   ├── ui/            # 用户界面组件
-│   └── cli/           # 命令行工具
-└── docs/              # 文档
+│   ├── core/          # Core framework
+│   ├── llm/           # LLM integration layer
+│   ├── plugins/       # Plugin system
+│   ├── ui/            # UI components
+│   └── cli/           # Command line tools
+└── docs/              # Documentation
 ```
 
-## 🔧 核心模块
+## 🔧 Core Modules
 
 ### Core Framework (@evomind-ai/core)
 
-提供框架的核心功能：
+Provides core framework functionality:
 
 ```typescript
 import { Plugin, ContextChain } from '@evomind-ai/core';
@@ -76,14 +76,14 @@ class MyPlugin implements Plugin {
   version = '1.0.0';
   
   async activate(): Promise<void> {
-    // 插件初始化逻辑
+    // Plugin initialization logic
   }
 }
 ```
 
 ### LLM Integration (@evomind-ai/llm)
 
-支持多个LLM提供商：
+Support for multiple LLM providers:
 
 ```typescript
 import { LLMProvider } from '@evomind-ai/llm';
@@ -96,7 +96,7 @@ const response = await provider.generate('Hello');
 
 ### Plugin System (@evomind-ai/plugins)
 
-灵活的插件管理：
+Flexible plugin management:
 
 ```typescript
 import { PluginManager } from '@evomind-ai/plugins';
@@ -108,36 +108,36 @@ await manager.loadPlugin(myPlugin, {
 });
 ```
 
-## 📚 开发指南
+## 📚 Development Guide
 
-### 构建项目
+### Building the Project
 
 ```bash
 npm run build
 ```
 
-### 运行测试
+### Running Tests
 
 ```bash
 npm run test
 ```
 
-### 文档
+### Documentation
 
-详细文档请访问 `docs` 目录或运行：
+For detailed documentation, visit the `docs` directory or run:
 
 ```bash
 cd docs && npm run dev
 ```
 
-## 🤝 贡献
+## 🤝 Contributing
 
-欢迎提交Pull Request或Issue。在提交PR之前，请确保：
+Pull Requests and Issues are welcome. Before submitting a PR, please ensure:
 
-1. 代码通过所有测试
-2. 更新相关文档
-3. 遵循代码规范
+1. All tests pass
+2. Documentation is updated
+3. Code follows the style guide
 
-## 📄 许可证
+## 📄 License
 
-本项目采用 [MIT](LICENSE) 许可证。
+This project is licensed under the [MIT](LICENSE) License.
